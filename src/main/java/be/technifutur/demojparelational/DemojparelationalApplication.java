@@ -9,6 +9,8 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.ApplicationContext;
 
+import java.util.List;
+
 @SpringBootApplication
 public class DemojparelationalApplication {
 
@@ -24,19 +26,21 @@ public class DemojparelationalApplication {
 				"modele",
 				Carburant.DIESEL,
 				true,
-				null);
+				null
+		);
 		Utilisateur u = new Utilisateur(
 				10L,
 				"username",
 				"password",
 				"nom",
 				"prenom",
-				null);
+				null
+		);
 
-//		v = voitureRepository.save(v);
-//		u = utilisateurRepository.save(u);
+		v = voitureRepository.save(v);
 
-		
+		u.setVoitures(List.of(v));
+		u = utilisateurRepository.save(u);
 	}
 
 }
