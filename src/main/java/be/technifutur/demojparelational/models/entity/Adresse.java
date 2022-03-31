@@ -17,7 +17,7 @@ public class Adresse
 {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "id", nullable = false)
+    @Column(name = "id", columnDefinition = "INT(11)", nullable = false)
     private Long id;
 
     @Column(name = "adresse_rue", nullable = false, length = 70)
@@ -32,6 +32,6 @@ public class Adresse
     @Column(name = "adresse_localite", nullable = false, length = 50)
     private String localite;
 
-    @OneToOne
+    @OneToOne(mappedBy = "adresse")
     private Utilisateur user;
 }
