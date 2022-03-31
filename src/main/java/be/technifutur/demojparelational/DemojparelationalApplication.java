@@ -34,13 +34,14 @@ public class DemojparelationalApplication {
 				"password",
 				"nom",
 				"prenom",
+				null,
 				null
 		);
 
-		v = voitureRepository.save(v);
-
-		u.setVoitures(List.of(v));
-		u = utilisateurRepository.save(u);
+//		v = voitureRepository.save(v);
+//
+//		u.setVoitures(List.of(v));
+//		u = utilisateurRepository.save(u);
 	}
 
 }

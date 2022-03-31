@@ -27,8 +27,8 @@ public class Permis
     private TypePermis type;
 
     @Column(name = "permis_delivered", nullable = false, updatable = false)
-    private LocalDate delivreLe;
+    private LocalDate delivrance;
 
-    @OneToMany
+    @ManyToOne
     private Utilisateur user;
 }

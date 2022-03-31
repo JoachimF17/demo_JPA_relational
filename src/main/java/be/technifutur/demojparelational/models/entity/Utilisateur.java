@@ -34,4 +34,10 @@ public class Utilisateur
 
     @ManyToMany
     private List<Voiture> voitures;
+
+    @OneToMany(mappedBy = "user")
+    private List<Permis> permis;
+
+    @OneToOne
+    private Adresse adresse;
 }
