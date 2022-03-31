@@ -1,4 +1,4 @@
-package be.technifutur.demojparelational.models.entity;
+package be.technifutur.demojparelational.models;
 
 public enum Carburant
 {
